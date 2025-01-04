@@ -15,8 +15,15 @@ class Cuenta{
             document.write('No hay saldo suficiente')
         }
     }
+    informar(){
+        document.write(`<p>La cuenta del ${this._titular}, posse un saldo de ${this._saldo} </p>`)
+    }
 }
 
 
 const cuenta = new Cuenta('Alex');
+cuenta.informar();
 cuenta.ingresar(5000);
+cuenta.informar();
+cuenta.extraer(2500)
+cuenta.informar();
